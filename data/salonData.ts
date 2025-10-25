@@ -29,7 +29,7 @@ export const contactInfo = {
         { name: 'Instagram', href: 'https://instagram.com/example', icon: FaInstagram },
         { name: 'WhatsApp', href: 'https://wa.me/74951234567', icon: FaWhatsapp },
         { name: 'Telegram', href: 'https://t.me/example', icon: FaTelegram },
-        { name: 'VK', href: 'https://t.me/example', icon: FaVk },
+        { name: 'VK', href: 'https://vk.com/example', icon: FaVk },
     ],
 };
 

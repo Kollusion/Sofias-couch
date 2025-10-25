@@ -1,10 +1,16 @@
+'use client'
 import React from 'react';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ListCheck, Pencil } from 'lucide-react';
 import Image from 'next/image';
 import { FaInstagram, FaVk } from "react-icons/fa6";
 
+import { contactInfo } from '@/data/salonData';
+import { useBookingStore } from '@/store/useBookingStore';
+
 const HeroSection = () => {
+    const { openModal } = useBookingStore();
     return (
         <section className='h-screen w-full lg:p-6'>
             <div className='h-full w-full lg:rounded-2xl max-lg:rounded-b-3xl bg-gradient-to-br from-accent to-chart-1/70 p-3 lg:p-12 flex max-lg:flex-col justify-center lg:justify-between items-center gap-6 overflow-clip relative'>
@@ -18,12 +24,18 @@ const HeroSection = () => {
                         Мастерство, вдохновленное вниманием к деталям
                     </h2>
                     <div className='flex gap-3 max-lg:flex-col'>
-                        <Button size={'xl'} className='w-sm'><Pencil /> Записаться</Button>
-                        <Button size={'xl'} variant={'secondary'}><ListCheck /> Услуги мастера</Button>
+                        <Button size={'xl'} className='w-sm' onClick={openModal}><Pencil /> Записаться</Button>
+                        <a href="#Services">
+                            <Button size={'xl'} variant={'secondary'}><ListCheck /> Услуги мастера</Button>
+                        </a>
                     </div>
                     <div className='flex gap-3 max-lg:justify-center w-full'>
-                        <Button variant={'ghost'}><FaInstagram className='text-primary' /> Мы в Instagram</Button>
-                        <Button variant={'ghost'}><FaVk className='text-primary' /> Мы в VK</Button>
+                        <Link href={contactInfo.socials[0].href}>
+                            <Button variant={'ghost'}><FaInstagram className='text-primary' /> Мы в Instagram</Button>
+                        </Link>
+                        <Link href={contactInfo.socials[3].href}>
+                            <Button variant={'ghost'}><FaVk className='text-primary' /> Мы в VK</Button>
+                        </Link>
                     </div>
                 </div>
                 <div className='flex-1 relative max-lg:hidden h-full '>
