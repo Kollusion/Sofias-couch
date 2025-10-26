@@ -41,7 +41,7 @@ const PriceList = () => {
                 {(['discounts', 'nails', 'hair', 'face'] as Category[]).map((category, index, arr) => (
                     <div
                         key={category}
-                        className={`flex-1 lg:p-3 border-2 lg:gap-3 flex items-center justify-center relative duration-500 hover:bg-accent cursor-pointer ${activeCategory === category ? 'bg-accent' : ''
+                        className={`flex-1 lg:p-3 border-2 lg:gap-3 flex items-center max-lg:flex-col justify-center relative duration-500 hover:bg-accent cursor-pointer ${activeCategory === category ? 'bg-accent' : ''
                             } ${index === 0 ? 'rounded-l-2xl' : ''} ${index === arr.length - 1 ? 'rounded-r-2xl' : ''}`}
                         onClick={() => setActiveCategory(category)}
                     >
@@ -86,7 +86,7 @@ const PriceList = () => {
                                 ) : (
                                     <>
                                         <TableCell className="text-right">{item.price}</TableCell>
-                                        <TableCell className="text-right">{item.duration}</TableCell>
+                                        <TableCell className="text-right">от {item.duration}</TableCell>
                                     </>
                                 )}
                             </TableRow>

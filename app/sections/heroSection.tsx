@@ -13,8 +13,8 @@ const HeroSection = () => {
     const { openModal } = useBookingStore();
     return (
         <section className='h-screen w-full lg:p-6'>
-            <div className='h-full w-full lg:rounded-2xl max-lg:rounded-b-3xl bg-gradient-to-br from-accent to-chart-1/70 p-3 lg:p-12 flex max-lg:flex-col justify-center lg:justify-between items-center gap-6 overflow-clip relative'>
-                <div className='lg:flex-1 w-min space-y-8 max-lg:text-center'>
+            <div className='h-full w-full px-3 lg:rounded-2xl max-lg:rounded-b-3xl bg-gradient-to-br from-accent to-chart-1/70 p-3 lg:p-12 flex max-lg:flex-col justify-center lg:justify-between items-center gap-6 overflow-clip relative'>
+                <div className='lg:flex-1 lg:w-min space-y-8 max-lg:text-center'>
                     <h1 className='text-3xl lg:text-7xl font-bold font-sans'>
                         Искусство, рожденное в атмосфере комфорта
                     </h1>
@@ -24,9 +24,9 @@ const HeroSection = () => {
                         Мастерство, вдохновленное вниманием к деталям
                     </h2>
                     <div className='flex gap-3 max-lg:flex-col'>
-                        <Button size={'xl'} className='w-sm' onClick={openModal}><Pencil /> Записаться</Button>
+                        <Button size={'xl'} className='lg:w-sm w-full' onClick={openModal}><Pencil /> Записаться</Button>
                         <a href="#Services">
-                            <Button size={'xl'} variant={'secondary'}><ListCheck /> Услуги мастера</Button>
+                            <Button size={'xl'} className='max-lg:w-full' variant={'secondary'}><ListCheck /> Услуги мастера</Button>
                         </a>
                     </div>
                     <div className='flex gap-3 max-lg:justify-center w-full'>

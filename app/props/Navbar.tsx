@@ -33,7 +33,7 @@ const Navbar = () => {
                     <div className='max-lg:hidden'>
                         <Button variant={'secondary'} size={active ? 'lg' : 'default'} className='opacity-100' onClick={openMenu}><MenuIcon /> Меню</Button>
                     </div>
-                    <div className='text-3xl font-serif'>
+                    <div className='text-xl lg:text-3xl font-serif'>
                         Sofia's Couch
                     </div>
                     <div className='flex gap-3'>
