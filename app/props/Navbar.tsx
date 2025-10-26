@@ -29,7 +29,7 @@ const Navbar = () => {
     return (
         <>
             <header className={`fixed w-full h-20 z-30 duration-500 ${active ? 'p-0 bg-background' : 'p-3 lg:p-6'}`}>
-                <nav className='flex justify-between items-center p-3 lg:p-6'>
+                <nav className='flex justify-between items-center p-6'>
                     <div className='max-lg:hidden'>
                         <Button variant={'secondary'} size={active ? 'lg' : 'default'} className='opacity-100' onClick={openMenu}><MenuIcon /> Меню</Button>
                     </div>
